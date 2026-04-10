@@ -1,0 +1,17 @@
+# Rust build artifacts
+/target/
+
+# Local agent/tooling state
+/.serena/
+/.spec-workflow/
+
+# Local Sisyphus runtime state (keep tracked fixtures)
+/.sisyphus/boulder.json
+/.sisyphus/evidence/
+/.sisyphus/notepads/
+/.sisyphus/plans/
+/.sisyphus/drafts/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
