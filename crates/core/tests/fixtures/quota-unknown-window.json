@@ -1,0 +1,11 @@
+{
+  "windows": [
+    {
+      "limit_id": "mystery-12h-limit",
+      "label": "12h experimental",
+      "used_percent": 88.0,
+      "window_duration_mins": 720,
+      "resets_at": "2026-04-10T12:00:00Z"
+    }
+  ]
+}

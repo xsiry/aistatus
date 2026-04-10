@@ -1,0 +1,36 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+
+      - name: Format check
+        run: cargo fmt --all --check
+
+      - name: Clippy
+        run: cargo clippy --workspace --all-targets --all-features -- -D warnings
+
+      - name: Workspace tests
+        run: cargo test --workspace
+
+      - name: Workspace build
+        run: cargo build --workspace
+
+      - name: Doctor fixture smoke
+        run: cargo run -- doctor --config .sisyphus/fixtures/sample-config.toml
+
+      - name: TUI fixture smoke
+        run: cargo test -p aistatus-tui diagnostics_view_shows_refresh_feedback

@@ -1,0 +1,6 @@
+{
+  "account_id": "acct-chatgpt-plus",
+  "display_name": "Primary ChatGPT",
+  "account_kind": "chatgpt",
+  "plan_type": "plus"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "v2",
+  "rateLimits": [
+    {
+      "limitId": "codex-main",
+      "limitName": "Codex",
+      "planType": "plus",
+      "primary": {
+        "usedPercent": 42.5,
+        "windowDurationMins": 300,
+        "resetsAt": "2026-04-10T05:00:00Z"
+      },
+      "secondary": {
+        "usedPercent": 15.0,
+        "windowDurationMins": 10080,
+        "resetsAt": "2026-04-14T00:00:00Z"
+      }
+    }
+  ],
+  "rateLimitsByLimitId": {
+    "codex-main": {
+      "limitId": "codex-main",
+      "limitName": "Codex",
+      "planType": "plus",
+      "primary": {
+        "usedPercent": 42.5,
+        "windowDurationMins": 300,
+        "resetsAt": "2026-04-10T05:00:00Z"
+      },
+      "secondary": {
+        "usedPercent": 15.0,
+        "windowDurationMins": 10080,
+        "resetsAt": "2026-04-14T00:00:00Z"
+      }
+    }
+  }
+}

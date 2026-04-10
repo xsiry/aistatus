@@ -1,0 +1,47 @@
+version = 1
+default_profile_id = "acct-chatgpt-plus"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-chatgpt-plus"
+display_name = "Primary ChatGPT"
+provider = "codex_protocol"
+auth_mode = "browser"
+account_kind = "chatgpt"
+health = "healthy"
+
+[profiles.profile.membership]
+tier = "plus"
+raw_plan_type = "plus"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 300
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+opencode_profile_id = "opencode-primary"
+codex_account_id = "acct-chatgpt-plus"
+
+[profiles.secret_ref]
+kind = "keychain"
+service = "aistatus"
+account = "codex-desktop"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-api-key"
+display_name = "Automation API Key"
+provider = "codex_protocol"
+auth_mode = "api_key"
+account_kind = "api_key"
+health = "healthy"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 600
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+
+[profiles.secret_ref]
+kind = "file"
+path = "secrets/acct-api-key.json"

@@ -1,0 +1,125 @@
+{
+  "refresh_command": {
+    "fixtures": "sample-quotas",
+    "force": true,
+    "now_epoch_secs": 1712700600
+  },
+  "state": {
+    "profiles": {
+      "acct-plus": {
+        "profile": {
+          "id": "acct-plus",
+          "display_name": "Primary ChatGPT",
+          "provider": "codex_protocol",
+          "auth_mode": "browser",
+          "account_kind": "chatgpt",
+          "membership": {
+            "tier": "plus",
+            "raw_plan_type": "plus"
+          },
+          "health": "healthy",
+          "refresh_policy": {
+            "refresh_interval_secs": 300,
+            "allow_manual_refresh": true
+          },
+          "future_switch_bridge": {}
+        },
+        "snapshot": {
+          "windows": [
+            {
+              "kind": "five_hour",
+              "limit_id": "codex-5h",
+              "used_percent": 42.5,
+              "window_duration_mins": 300,
+              "resets_at": "2026-04-10T05:00:00Z",
+              "label": "5h",
+              "severity": "normal"
+            },
+            {
+              "kind": "weekly",
+              "limit_id": "codex-weekly",
+              "used_percent": 15.0,
+              "window_duration_mins": 10080,
+              "resets_at": "2026-04-14T00:00:00Z",
+              "label": "Weekly",
+              "severity": "normal"
+            }
+          ]
+        },
+        "usage_family": "subscription_quota",
+        "status": "healthy",
+        "last_error": null,
+        "last_updated_at": 1712700000
+      },
+      "acct-pro": {
+        "profile": {
+          "id": "acct-pro",
+          "display_name": "Work Pro",
+          "provider": "codex_protocol",
+          "auth_mode": "headless",
+          "account_kind": "chatgpt",
+          "membership": {
+            "tier": "pro",
+            "raw_plan_type": "pro"
+          },
+          "health": "stale",
+          "refresh_policy": {
+            "refresh_interval_secs": 300,
+            "allow_manual_refresh": true
+          },
+          "future_switch_bridge": {}
+        },
+        "snapshot": {
+          "windows": [
+            {
+              "kind": "five_hour",
+              "limit_id": "codex-5h",
+              "used_percent": 82.0,
+              "window_duration_mins": 300,
+              "resets_at": "2026-04-10T05:00:00Z",
+              "label": "5h",
+              "severity": "warning"
+            },
+            {
+              "kind": "weekly",
+              "limit_id": "codex-weekly",
+              "used_percent": 65.0,
+              "window_duration_mins": 10080,
+              "resets_at": "2026-04-14T00:00:00Z",
+              "label": "Weekly",
+              "severity": "normal"
+            }
+          ]
+        },
+        "usage_family": "subscription_quota",
+        "status": "stale",
+        "last_error": null,
+        "last_updated_at": 1712700300
+      },
+      "acct-broken": {
+        "profile": {
+          "id": "acct-broken",
+          "display_name": "Broken Browser Session",
+          "provider": "codex_protocol",
+          "auth_mode": "browser",
+          "account_kind": "chatgpt",
+          "membership": {
+            "tier": "unknown",
+            "raw_plan_type": "unknown"
+          },
+          "health": "error",
+          "refresh_policy": {
+            "refresh_interval_secs": 300,
+            "allow_manual_refresh": true
+          },
+          "future_switch_bridge": {}
+        },
+        "snapshot": null,
+        "usage_family": "subscription_quota",
+        "status": "error",
+        "last_error": "empty browser session payload",
+        "last_updated_at": null
+      }
+    }
+  }
+}

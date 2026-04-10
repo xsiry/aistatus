@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "v2",
+  "account": {
+    "type": "chatgpt",
+    "email": "fallback@example.com",
+    "planType": null
+  }
+}

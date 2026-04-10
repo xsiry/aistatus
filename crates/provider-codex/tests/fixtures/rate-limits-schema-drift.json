@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "v3",
+  "rateLimits": [
+    {
+      "limitId": "codex-main",
+      "limitName": "Codex",
+      "planType": "plus",
+      "primary": {
+        "usedPercent": 42.5,
+        "windowDurationMins": 300,
+        "resetsAt": "2026-04-10T05:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[package]
+name = "aistatus-app"
+version = "0.1.0"
+edition.workspace = true
+
+[lib]
+name = "aistatus_app"
+
+[dependencies]
+aistatus_core = { package = "aistatus-core", path = "../core", default-features = false }
+aistatus_config = { package = "aistatus-config", path = "../config", default-features = false }
+aistatus_store = { package = "aistatus-store", path = "../store", default-features = false }
+aistatus_provider_codex = { package = "aistatus-provider-codex", path = "../provider-codex", default-features = false }
+aistatus_provider_openai_api = { package = "aistatus-provider-openai-api", path = "../provider-openai-api", default-features = false }
+serde.workspace = true
+serde_json.workspace = true
+toml.workspace = true
+thiserror.workspace = true
+
+[features]
+default = ["live"]
+live = ["aistatus_core/live"]
+fixture-only = []

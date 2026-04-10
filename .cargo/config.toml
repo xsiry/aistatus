@@ -1,0 +1,4 @@
+[alias]
+fmt-all = "fmt --all"
+clippy-all = "clippy --workspace --all-targets"
+test-all = "test --workspace"

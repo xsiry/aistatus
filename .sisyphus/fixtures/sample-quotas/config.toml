@@ -1,0 +1,74 @@
+version = 1
+default_profile_id = "acct-plus"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-plus"
+display_name = "Primary ChatGPT"
+provider = "codex_protocol"
+auth_mode = "browser"
+account_kind = "chatgpt"
+health = "healthy"
+
+[profiles.profile.membership]
+tier = "plus"
+raw_plan_type = "plus"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 300
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+codex_account_id = "acct-plus"
+
+[profiles.secret_ref]
+kind = "managed"
+id = "sample-quotas-plus"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-pro"
+display_name = "Work Pro"
+provider = "codex_protocol"
+auth_mode = "headless"
+account_kind = "chatgpt"
+health = "stale"
+
+[profiles.profile.membership]
+tier = "pro"
+raw_plan_type = "pro"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 300
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+codex_account_id = "acct-pro"
+
+[profiles.secret_ref]
+kind = "managed"
+id = "sample-quotas-pro"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-broken"
+display_name = "Broken Browser Session"
+provider = "codex_protocol"
+auth_mode = "browser"
+account_kind = "chatgpt"
+health = "error"
+
+[profiles.profile.membership]
+tier = "unknown"
+raw_plan_type = "unknown"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 300
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+codex_account_id = "acct-broken"
+
+[profiles.secret_ref]
+kind = "managed"
+id = "sample-quotas-broken"

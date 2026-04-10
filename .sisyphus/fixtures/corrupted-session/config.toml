@@ -1,0 +1,25 @@
+version = 1
+default_profile_id = "acct-corrupt"
+
+[[profiles]]
+[profiles.profile]
+id = "acct-corrupt"
+display_name = "Broken Browser Session"
+provider = "codex_protocol"
+auth_mode = "browser"
+account_kind = "chatgpt"
+health = "stale"
+
+[profiles.profile.membership]
+tier = "plus"
+raw_plan_type = "plus"
+
+[profiles.profile.refresh_policy]
+refresh_interval_secs = 300
+allow_manual_refresh = true
+
+[profiles.profile.future_switch_bridge]
+
+[profiles.secret_ref]
+kind = "managed"
+id = "corrupted-secret"

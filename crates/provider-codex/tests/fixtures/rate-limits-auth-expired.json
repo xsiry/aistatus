@@ -1,0 +1,7 @@
+{
+  "schemaVersion": "v2",
+  "error": {
+    "code": "auth_required",
+    "message": "session expired"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "windows": [
+    {
+      "limit_id": "codex-5h",
+      "label": null,
+      "used_percent": 42.5,
+      "window_duration_mins": 300,
+      "resets_at": "2026-04-10T05:00:00Z"
+    },
+    {
+      "limit_id": "codex-weekly",
+      "label": null,
+      "used_percent": 15.0,
+      "window_duration_mins": 10080,
+      "resets_at": "2026-04-14T00:00:00Z"
+    }
+  ]
+}
